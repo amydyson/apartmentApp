@@ -18,7 +18,7 @@ class ApartmentsController < ApplicationController
 
   def full_address
 
-    Geocoder.geocode()
+  
 
   end
 
