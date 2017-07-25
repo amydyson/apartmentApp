@@ -18,7 +18,14 @@ class ApartmentsController < ApplicationController
 
   def full_address
 
+  end
 
+  def find
+    @search_results = Apartment.basic_search( street1: params[:street], city: params[:city])
+    @apartment = @search_results.first
+    #Above returns an ARRAY, @apartment.id doesn't work, but @apartment.first.id does work.
+    @id = @apartment.id
+    redirect_to "/apartments/#{@id}"
 
   end
 
