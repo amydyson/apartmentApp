@@ -33,7 +33,8 @@ gem 'paperclip'
 gem 'textacular'
 gem 'devise'
 gem 'omniauth-facebook'
-
+gem 'cancancan'
+gem 'rolify'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

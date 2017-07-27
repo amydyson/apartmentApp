@@ -64,4 +64,12 @@
   <div class="actions">
     <%= form.submit %>
   </div>
+
+  <p>
+    <%= if !current_user.nil?
+          current_user.email + ' (' + current_user.roles.pluck(:name).join(",") + ')'
+        end
+    %>
+  </p>
+
 <% end %>
