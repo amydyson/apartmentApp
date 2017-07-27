@@ -11,7 +11,7 @@ class Ability
     elsif user.has_role? :manager
       can :manage, Apartment
     elsif user.has_role? :renter
-      can :read, Apartment, user_id: user.id
+      can :read, :all
     end
   end
 end

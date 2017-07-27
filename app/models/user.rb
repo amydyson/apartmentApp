@@ -9,7 +9,7 @@ class User < ApplicationRecord
   after_create :assign_role
 
          def assign_role
-           add_role(:student)
+           add_role(:renter)
          end
 
          def self.from_omniauth(auth)

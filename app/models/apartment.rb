@@ -4,6 +4,7 @@ class Apartment < ApplicationRecord
     content_type: { content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"] },
     size: { in: 0..10.megabytes }
   belongs_to :user
+  validates :user, presence: true
 
   resourcify
 end
